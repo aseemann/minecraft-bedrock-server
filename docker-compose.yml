@@ -1,0 +1,11 @@
+services:
+  minecraft:
+    image: aseemann/minecraft-server
+    volumes:
+      - /var/games/minecraft/server/worlds:/mojang/bedrock/server/worlds
+    ports:
+      - 19132:19132
+      - 19132:19132/udp
+    restart: "unless-stopped"
+    tty: true
+
